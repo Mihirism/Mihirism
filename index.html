@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>konarak.in</title>
+		<meta name="author" content="Mihir Pathak">
+		<link rel="stylesheet" media="all" href="style.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+		<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37173784-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Google Analytics end -->
+	</head>
+<body>
+<div id="terminal"></div>
+
+<!-- Terminal Instance -->
+<script src="terminal.min.js"></script>
+<script>
+var terminal = new Terminal('terminal', {welcome: 'So you\'re finally here, eh? Enter \'help\' to get started.<br><br>',prompt: 'guest@Mihirism:~', separator: '$'}, {
+	execute: function(cmd, args) {
+		switch (cmd) {
+			case 'clear':
+				terminal.clear();
+				return '';
+
+			case 'about':
+				return '<br>Hi, I\'m Mihir Pathak – I am from Gujarat, India… I love Art + Technology+ Spirituality,<br>I wannabe Technopreneur, Amateur Writer, Inventor, Educator.<br><br>';
+
+			case 'links':
+				return '<br><a href="https://github.com/Mihirism" target="_blank">https://github.com/Mihirism</a><br><a href="https://twitter.com/nadan45" target="_blank">https://twitter.com/nadan45</a><br><a href="https://www.facebook.com/mihir.pathak1" target="_blank">https://www.facebook.com/mihir.pathak1</a><br><br>';
+
+			case 'help':
+				return '<br><pre>about        returns information about Mihir</pre><pre>clear        clears the terminal window</pre><pre>contact      returns contact information</pre><pre>help         returns this information</pre><pre>links        returns links to social networking/coding sites</pre><pre>tools        returns my hardware/software details</pre><br><br>';
+
+			case 'contact':
+				return '<br>You can email me at mihir.pathak@gmail.com<br>my nick is nadan.<br> To see a list of my social networking/coding profile(s) you can type \'links\'.<br><br>';
+
+			case 'tools':
+				return '<br><b>Hardware</b><br><br>I use Toshiba satellite Laptop. It\'s got an Intel i3 <br>and 6 GB of RAM.<br><b>Software</b><br><br>OpenSUSE, bash<br><br>'
+
+			default:
+				// Unknown command.
+				return false;
+		};
+	}
+});
+</script>
+<!-- Terminal Instance end-->
+
+</body>
+</html>
